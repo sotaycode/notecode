@@ -2,7 +2,7 @@
 layout: post
 title:  "Array Java series 1"
 date:   2020-05-23 09:29:20
-categories: array java series-1
+categories: array java series-1 Khai báo mảng trong Java
 ---
 
 ## Mảng trong Java mảng là một object vô cùng quan trọng, sử dụng một biến duy nhất để thực hiện lưu trữ nhiều giá trị cùng kiểu dữ liệu. 
