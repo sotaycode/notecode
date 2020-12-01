@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Spring Batch - Series - 1"
+title:  "Spring Batch - Series - 2"
 date:   2020-06-28 09:29:20
-categories: Spring Batch - Series - 1 Một số khái niệm cơ bản.
+categories: Spring Batch - Series - 2 JobRepository
 ---
 
 ### Tại bài báo này mình sẽ thực hiện tạo một JobRepository.
