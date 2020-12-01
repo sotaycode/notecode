@@ -1,11 +1,10 @@
 # Site settings
-title: Klise Theme # site title
+title: So Tay # site title
 description: >- # site description
-  He's writing in Bahasa about web technology and experience as a journal 
-  for documentation things that he learned, meet him <a href="https://github.com/piharpi" target="_blank" rel="noopener">@github</a>.
+  Tôi là một lập trình viên, mong muốn của tôi là trao dồi kiến thức và kinh nghiệm lập trình, nâng cao  nâng lực bản thân.
 lang: en-US # default lang
 timezone: Asia/Bangkok  # set your timezone
-image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
+image: assets/img/avatar_Bod.png # This image used for Open Graph more info https://ogp.me/
 repo: https://github.com/piharpi/jekyll-klise # site repo [optional]
 mode: light # default theme "dark" | "light"
 
@@ -15,7 +14,7 @@ author:
   bio: >- # tell to the world
     Notes to Myself become to Developer
   username: username # general username
-  github: github_username # github username
+  github: TranDuongNgocTuan # github username
   twitter: twitter_username # twitter username
   facebook: ittuan123 # facebook username
   email: ittuan123@gmail.com # email adress
