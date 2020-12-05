@@ -11,15 +11,16 @@ categories: Spring Batch - Series - 2 JobRepository
 
 ### 1. Khái niệm.
 
-- CRUD trong SQL:
-  | Operation  | &nbsp;&nbsp;SQL |
+CRUD trong SQL:
+
+  | Operation  |SQL |
   |:-----------|---------|
   |Create      |INSERT   |
   |Read        |SELECT   | 
   |Update      |UPDATE   | 
   |Delete      |DELETE   | 
 
-- JobRepository
+JobRepository:
   > Repository responsible for persistence of batch meta-data entities.
   
   Nhiệm vụ thực hiện lưu trữ và đưa thông tin đôi tượng (object) vào đúng bản cài đặt của Spring Batch.
