@@ -11,7 +11,7 @@ categories: array java series-1 Khai báo mảng trong Java
 
 Ví dụ về cú pháp:
 
-{% highlight java%}
+{% highlight java rouge %}
 int[] ages;
 int ages[];
 {% endhighlight %}
@@ -27,7 +27,7 @@ Tạo (Creating):
  
 Ví dụ về cú pháp:
          
-{% highlight java%}
+{% highlight java rouge %}
 int[] ages = new int[10];
 int ages[] = new int[10];
 {% endhighlight %}
@@ -38,34 +38,34 @@ Cú pháp trên có ý nghĩa là tạo một mảng có 10 phần tử, nói c�
 
    Ví dụ về cú pháp (1 chiều):
    
-{% highlight java %}
-  int[] ages = \{1, 2, 3, 4, 5, 6\};
-  int ages[] = \{1, 2, 3, 4, 5, 6\};
+{% highlight java rouge %}
+  int[] ages = {1, 2, 3, 4, 5, 6};
+  int ages[] = {1, 2, 3, 4, 5, 6};
 {% endhighlight %}
 
 Cú pháp khởi tạo phía trên có ý là khởi tạo 6 phần tử và có giá trị từ 1 - 6.
     
 Ví dụ về cú pháp (2 chiều):
 
-{% highlight java %}
-int[][] board = \{\{1, 2, 3, 4, 5, 6\}, \{1, 2, 3, 4, 5, 6\}\};
-int board[][] = \{\{1, 2, 3, 4, 5, 6\}, \{1, 2, 3, 4, 5, 6\}\};
+{% highlight java rouge %}
+int[][] board = {{1, 2, 3, 4, 5, 6}, {1, 2, 3, 4, 5, 6}};
+int board[][] = {{1, 2, 3, 4, 5, 6}, {1, 2, 3, 4, 5, 6}};
 {% endhighlight %}
     
 Ví dụ về cú pháp (3 chiều):
     
-{% highlight java%}
-int[][][] board = \{\{\{1, 2\}, \{3, 4\}\}, \{\{5, 6\}, \{7, 8\}\}\};
-int board[][][] = \{\{\{1, 2\}, \{3, 4\}\}, \{\{5, 6\}, \{7, 8\}\}\};
+{% highlight java rouge %}
+int[][][] board = {{{1, 2}, {3, 4}}, {{5, 6}, {7, 8}}};
+int board[][][] = {{{1, 2}, {3, 4}}, {{5, 6}, {7, 8}}};
 {% endhighlight %}
 
 ###  Truy xuất (Accessing).
 
 Ví dụ cú pháp:
 
-{% highlight java%}
+{% highlight java rouge %}
 // Khởi tạo một mảng ages;
-int[] ages = \{1, 2, 3, 4, 5, 6\};
+int[] ages = {1, 2, 3, 4, 5, 6};
 // Truy xuất phần tử:
 // Truy xuất giá trị phần tử đầu tiên của mảng:
 ages[0]; // giá trị 1
