@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Spring Batch - Series - 1"
+title:  "Spring Cron - Series - 1"
 date:   2021-01-31 05:20:20
 categories: Cron Jobs - 1 Giới thiệu cron trong Spring.
 ---
