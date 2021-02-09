@@ -50,9 +50,9 @@ Do đó chúng ta có thể thiết lập được các công việc theo chu k�
 ##### Ví dụ:
 
 ```
-0 11 * * * * * 
+0 0 11 * * * * * 
 ```
 
-**At 11:00 am every day**
+**At 11:00:00 am every day**
 
 Truy cập vào đây: [Tool cron](https://sotaycode.github.io/cron.sample) để tham khảo cách chuyển đổi của cron job trong Spring (công cụ chưa hoàn chỉnh, mình sẽ thực hiện chỉnh sửa và cập nhật).
