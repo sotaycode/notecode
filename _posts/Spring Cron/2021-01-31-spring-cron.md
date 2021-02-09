@@ -43,6 +43,7 @@ Các cách cài đặt:
 * * * * * *
 {% endhighlight %}
 
+
 > Khác với cron trong linux, cron trong Spring hỗ trợ tới đơn vị second. 
 
 Do đó chúng ta có thể thiết lập được các công việc theo chu kỳ ở đơn vị second.
