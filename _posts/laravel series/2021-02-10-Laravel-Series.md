@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Giới thiệu về series note Laravel"
+title:  "Giới thiệu về Laravel"
 date:   2021-02-10 11:35:20
-categories: Giới thiệu về series note Laravel.
+categories: Những note Laravel.
 ---
 
-# Giới thiệu về series note Laravel
+# Những note Laravel
 
 1. Giới thiệu về lịch sử Laravel.
 2. Setup môi trường và tool.
