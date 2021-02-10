@@ -13,9 +13,9 @@ PHP là ngôn ngữ kịch bản, mã nguồn mở với mục đích sử dụn
 
 PHP viết tắt:
 
-- Hypertext Preprocessor ( recursive acronym for `PHP`) ([link1](https://www.php.net/manual/en/intro-whatis.php))
+-Hypertext Preprocessor ( recursive acronym for `PHP`) ([link1](https://www.php.net/manual/en/intro-whatis.php))
 
-- Personal Home Page ([link2](https://whatis.techtarget.com/definition/Personal-Home-Page-PHP#:~:text=In%20Web%20programming%2C%20Personal%20Home,on%20Linux%20Web%20servers.))
+-Personal Home Page ([link2](https://whatis.techtarget.com/definition/Personal-Home-Page-PHP#:~:text=In%20Web%20programming%2C%20Personal%20Home,on%20Linux%20Web%20servers.))
 
 ### Framework
 
