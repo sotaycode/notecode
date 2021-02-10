@@ -24,7 +24,7 @@ Trong lập trình máy tính, một bộ khung phần mềm (software framework
 
 [topdev](https://topdev.vn/blog/framework-la-gi-su-khac-biet-giua-framework-va-library/)
 
- ### Laravel Framework
+### Laravel Framework
 
 Laravel là một framework phát triển ứng dụng web, laravel cung cấp nhiều phương thức, tính năng, cú pháp thân thiện với lập trình viên ngay cả với người mới lập trình.
 
