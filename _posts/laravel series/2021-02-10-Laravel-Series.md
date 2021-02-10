@@ -18,3 +18,5 @@ categories: Những note Laravel.
 9. Eloquent.
 10. MVC pattern.
 11. Project ToDo List.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/h6DEDm7C37A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
