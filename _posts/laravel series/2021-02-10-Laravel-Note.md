@@ -9,7 +9,7 @@ categories: Những note Laravel.
 
 1. Giới thiệu về lịch sử Laravel.
 2. Setup môi trường và tool.
-3. Set domain.
+3. New project và set domain.
 4. Router.
 5. Controller.
 6. View.
