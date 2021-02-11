@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "2021-02-11-New project và set domain-Note 3"
+title:  "2021-02-11-New project và set domain - Note 3"
 date:   2021-02-11 12:07:20
 categories: New project và set domain.
 ---
