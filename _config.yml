@@ -21,7 +21,7 @@ author:
   avatar: /assets/img/avatar_Bod.png # change with your own avatar
 
 # URL settings
-url: "sotaycode.xyz" #
+url: "https://sotaycode.xyz/" #
 baseurl:
 permalink: /:title/
 google_analytics: # leave it blank if not wish
