@@ -1,13 +1,14 @@
 # Site settings
-title_left    : "Think"
-title_right   : "space" # default: ""
-description   : "Minimalist Jekyll theme for technical writing blog."
-keywords      : "Jekyll, theme, free, download, SEO, blog, web, minimalist, thinkspace"
-url           : https://heiswayi.github.io/thinkspace # site url
-baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
-cover         : "" # image uri like logo/cover image for site seo
+title_left    : "So"
+title_right   : "Tay" # default: ""
+description   : "Blog of Note."
+keywords      : "Jekyll, Java, Code, Note"
+url           : https://sotaycode.xyz # site url
+baseurl       : "https://github.com/sotaycode" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
+cover         : "/assets/img/avatar_Bod.png" # image uri like logo/cover image for site seo
+timezone      : Asia/Bangkok
 
-google_analytics  : UA-XXXXX-XX
+google_analytics  : ""
 twitter_username  : ""
 comments_enabled  : false # if enabled (set to true), please provide your disqus_username
 disqus_shortname  : ""
@@ -28,7 +29,15 @@ sass:
 
 # Author settings
 author:
-  name     : "John Doe"
+  name        : Tran Tuan # author name
+  bio         : >- # tell to the world
+    Notes to Myself become to Developer
+  #username    : username # general username
+  github      : TranDuongNgocTuan # github username
+  #twitter     : twitter_username # twitter username
+  facebook    : ittuan123 # facebook username
+  email       : ittuan123@gmail.com # email adress
+  avatar      : /assets/img/avatar_Bod.png # change with your own avatar
 
 plugins:
   - jekyll-sitemap
