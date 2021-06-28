@@ -1,6 +1,6 @@
 # Site settings
-title_left    : "So"
-title_right   : "Tay" # default: ""
+title_left    : "So Tay"
+title_right   : "Code" # default: ""
 description   : "Blog of Note."
 keywords      : "Jekyll, Java, Code, Note"
 url           : https://sotaycode.xyz # site url
