@@ -1,0 +1,66 @@
+I"'	<h1 id="giới-thiệu-về-lịch-sử-laravel">Giới thiệu về lịch sử Laravel.</h1>
+
+<h3 id="php">PHP</h3>
+
+<p>PHP là ngôn ngữ kịch bản, mã nguồn mở với mục đích sử dụng cho phát triển web và có thể nhúng vào HTML.</p>
+
+<p>PHP viết tắt:</p>
+
+<ul>
+  <li>Hypertext Preprocessor ( recursive acronym for <code class="language-plaintext highlighter-rouge">PHP</code>)  (<a href="https://www.php.net/manual/en/intro-whatis.php">link1</a>)</li>
+  <li>Personal Home Page (<a href="https://whatis.techtarget.com/definition/Personal-Home-Page-PHP#:~:text=In%20Web%20programming%2C%20Personal%20Home,on%20Linux%20Web%20servers.">link2</a>)</li>
+</ul>
+
+<h3 id="framework">Framework</h3>
+
+<p>Trong lập trình máy tính, một bộ khung phần mềm (software framework) là một khuôn khổ trừ tượng hoặc khung xương đã được định nghĩa, framework cung cấp các chức năng được xây dựng sẵn. (Các bạn tham khảo thêm ở link phía dưới).</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Software_framework">wikipedia</a></p>
+
+<p><a href="https://topdev.vn/blog/framework-la-gi-su-khac-biet-giua-framework-va-library/">topdev</a></p>
+
+<h3 id="laravel-framework">Laravel Framework</h3>
+
+<p>Laravel là một framework phát triển ứng dụng web, laravel cung cấp nhiều phương thức, tính năng, cú pháp thân thiện với lập trình viên ngay cả với người mới lập trình.</p>
+
+<h3 id="dòng-thời-gian-phát-hành-các-phiên-bản-laravel">Dòng thời gian phát hành các phiên bản Laravel</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Version</th>
+      <th>Release date</th>
+      <th>PHP version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5</td>
+      <td>4-Feb-15</td>
+      <td>≥ 5.4.0</td>
+    </tr>
+    <tr>
+      <td>5.5 LTS</td>
+      <td>30-Aug-17</td>
+      <td>≥ 7.0.0</td>
+    </tr>
+    <tr>
+      <td>6 LTS</td>
+      <td>3-Sep-19</td>
+      <td>≥ 7.2.0</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>March 3, 2020[18]</td>
+      <td>≥ 7.2.5[19]</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>8-Sep-20</td>
+      <td>≥ 7.3.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Tham khảo thêm lịch sử phát triển tại laravel <a href="https://laravel.com/docs/8.x/releases">releases</a>.</p>
+:ET

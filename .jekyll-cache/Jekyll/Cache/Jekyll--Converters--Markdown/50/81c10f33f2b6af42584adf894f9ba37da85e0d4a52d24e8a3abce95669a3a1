@@ -1,0 +1,72 @@
+I""<h3 id="ở-đâu-mình-giới-thiệu-2-lỗi-mình-gặp-trong-lúc-sử-dụng-mảng-trong-java">Ở đâu mình giới thiệu 2 lỗi mình gặp trong lúc sử dụng mảng trong java.</h3>
+
+<h3 id="1-truy-cập-phần-tử-nằm-ngoài-độ-rộng-của-mảng">1. Truy cập phần tử nằm ngoài độ rộng của mảng.</h3>
+
+<p>Tạo mảng 4 phần tử:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">};</span></code></pre></figure>
+
+<p>Thực hiện truy cập phần tử:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">arr</span><span class="o">[</span><span class="mi">1</span><span class="o">]);</span> <span class="c1">// in ra 2</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">arr</span><span class="o">[</span><span class="mi">3</span><span class="o">]);</span> <span class="c1">// in ra 4</span></code></pre></figure>
+
+<p>Trường hợp truy cập vào phần tử vị trí thứ 4:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">arr</span><span class="o">[</span><span class="mi">4</span><span class="o">]);</span> </code></pre></figure>
+
+<p>Thông báo lỗi:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Exception</span> <span class="n">in</span> <span class="n">thread</span> <span class="s">"main"</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">ArrayIndexOutOfBoundsException</span><span class="o">:</span> <span class="mi">4</span></code></pre></figure>
+
+<p>Trường hợp truy cập vào phần tử vị trí thứ -1:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">arr</span><span class="o">[-</span><span class="mi">1</span><span class="o">]);</span> </code></pre></figure>
+
+<p>Thông báo lỗi:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Exception</span> <span class="n">in</span> <span class="n">thread</span> <span class="s">"main"</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">ArrayIndexOutOfBoundsException</span><span class="o">:</span> <span class="o">-</span><span class="mi">1</span></code></pre></figure>
+
+<p>Vd: Sau đây là ví dụ về duyệt một mảng tìm phần tử lớn nhất (MAX)</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="o">[]</span><span class="n">a</span> <span class="o">=</span> <span class="o">{</span><span class="mi">5</span><span class="o">,</span><span class="mi">6</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">};</span> <span class="c1">// mảng có 5 phần tử.</span>
+<span class="kt">int</span> <span class="no">MAX</span> <span class="o">=</span> <span class="n">a</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">6</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Thông báo lỗi:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Exception</span> <span class="n">in</span> <span class="n">thread</span> <span class="s">"main"</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">ArrayIndexOutOfBoundsException</span><span class="o">:</span> <span class="mi">5</span></code></pre></figure>
+
+<p>Bởi vì không tồn tại phần tử thứ 5 trong mảng.</p>
+
+<p>Để xác định số lượng phần tử thì thực hiện:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">);</span> </code></pre></figure>
+
+<p>Chỉnh sửa code:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="o">[]</span><span class="n">a</span> <span class="o">=</span> <span class="o">{</span><span class="mi">5</span><span class="o">,</span><span class="mi">6</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">};</span> <span class="c1">// mảng có 5 phần tử.</span>
+<span class="kt">int</span> <span class="no">MAX</span> <span class="o">=</span> <span class="n">a</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
+<span class="o">}</span></code></pre></figure>
+
+<h3 id="2-truy-cập-vào-phần-tử-chưa-được-tạo">2. Truy cập vào phần tử chưa được tạo.</h3>
+
+<p>Khởi tạo mảng:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">String</span><span class="o">[]</span> <span class="n">st</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">[</span><span class="mi">4</span><span class="o">];</span>
+<span class="n">st</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="s">"A"</span><span class="o">;</span>
+<span class="n">st</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="s">"B"</span><span class="o">;</span>
+<span class="n">st</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="s">"D"</span><span class="o">;</span></code></pre></figure>
+
+<p>Truy cập cào phần tử vị trí số 3;</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">st</span><span class="o">[</span><span class="mi">2</span><span class="o">]);</span></code></pre></figure>
+
+<p>Kết quả:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kc">null</span></code></pre></figure>
+:ET

@@ -1,0 +1,16 @@
+I"t<h1 id="những-note-laravel">Những note Laravel</h1>
+
+<ol>
+  <li>Giới thiệu về lịch sử Laravel.</li>
+  <li>Setup môi trường và tool.</li>
+  <li>New project và set domain.</li>
+  <li>Router.</li>
+  <li>Controller.</li>
+  <li>View.</li>
+  <li>Database.</li>
+  <li>SQL.</li>
+  <li>Eloquent.</li>
+  <li>MVC pattern.</li>
+  <li>Project ToDo List.</li>
+</ol>
+:ET

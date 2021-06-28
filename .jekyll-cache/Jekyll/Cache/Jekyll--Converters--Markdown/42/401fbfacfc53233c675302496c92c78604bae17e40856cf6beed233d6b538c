@@ -1,0 +1,73 @@
+I"�<h1 id="giới-thiệu-về-jsx">Giới thiệu về JSX</h1>
+
+<h3 id="1-jsx">1. JSX</h3>
+
+<figure class="highlight"><pre><code class="language-react" data-lang="react"><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, world!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;;</span></code></pre></figure>
+
+<p>Line code phía trên được gọi là JSX, JSX là một syntax extension to Javascript.</p>
+
+<p>JSX cung cấp cho chúng ta những cú pháp dễ đọc hay thể hiện đơn giản (syntactic sugar).</p>
+
+<p>Code được viết bằng JSX sẽ được biên dịch sang javascript để trình duyệt (browser) hiểu được.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">React</span><span class="o">.</span><span class="na">createElement</span><span class="o">(</span>
+    <span class="s">"h1"</span><span class="o">,</span> 
+    <span class="kc">null</span><span class="o">,</span> 
+    <span class="s">"Hello, world!"</span>
+<span class="o">);</span></code></pre></figure>
+
+<h3 id="2-biểu-thức-jsx">2. Biểu thức JSX</h3>
+
+<ul>
+  <li>Thay thế chuỗi:</li>
+</ul>
+
+<p>JSX:</p>
+
+<figure class="highlight"><pre><code class="language-react" data-lang="react"><span class="kd">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Blog</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hi, <span class="si">{</span><span class="nx">name</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;;</span></code></pre></figure>
+
+<p>Javascript:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Blog</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="cm">/*#__PURE__*/</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">"</span><span class="s2">h1</span><span class="dl">"</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Hi, </span><span class="dl">"</span><span class="p">,</span> <span class="nx">name</span><span class="p">);</span></code></pre></figure>
+
+<ul>
+  <li>Biểu thức toán học:</li>
+</ul>
+
+<p>JSX:</p>
+
+<figure class="highlight"><pre><code class="language-react" data-lang="react"><span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">c</span> <span class="o">=</span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Sum: <span class="si">{</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;;</span></code></pre></figure>
+
+<p>Javascript:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">c</span> <span class="o">=</span> <span class="cm">/*#__PURE__*/</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">"</span><span class="s2">h1</span><span class="dl">"</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Sum: </span><span class="dl">"</span><span class="p">,</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">);</span></code></pre></figure>
+
+<h3 id="3-trong-một-method">3. Trong một method</h3>
+
+<figure class="highlight"><pre><code class="language-react" data-lang="react"><span class="kd">function</span> <span class="nx">formatName</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">user</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">user</span><span class="p">.</span><span class="nx">lastName</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">firstName</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Harper</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">lastName</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Perez</span><span class="dl">'</span>
+<span class="p">};</span>
+
+<span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">(</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>
+    Hello, <span class="si">{</span><span class="nx">formatName</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span><span class="si">}</span>!
+  <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">);</span></code></pre></figure>
+
+<p>Ở đây ta sẽ nhận được element có giá trị là:</p>
+
+<figure class="highlight"><pre><code class="language-react" data-lang="react"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> Hello, Harper Perez <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span></code></pre></figure>
+
+<p>Mình tạm kết ở đây, Bye.</p>
+:ET

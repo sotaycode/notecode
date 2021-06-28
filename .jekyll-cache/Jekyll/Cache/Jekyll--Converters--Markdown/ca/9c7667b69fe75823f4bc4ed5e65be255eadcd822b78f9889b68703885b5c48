@@ -1,0 +1,57 @@
+I"�	<h1 id="cron-jobs">Cron Jobs.</h1>
+
+<h3 id="cron-job">Cron job.</h3>
+
+<p>Cron job là một tính năng giúp lập lịch (thời gian, lịch biểu) để thực thi những mã lệnh hoặc nhưng công việc ở server.</p>
+
+<p>Ví dụ: các công việc tư động hoá:</p>
+
+<ul>
+  <li>Tự động Backup dữ liệu, các thao tác DML,…</li>
+  <li>Gửi và thông báo email.</li>
+  <li>Thực thi một lênh, script,..</li>
+  <li>…</li>
+</ul>
+
+<p>Các cách cài đặt:</p>
+
+<ul>
+  <li>Thiết lập thông qua script.</li>
+  <li>Cài đặt thông qua Control Panel (cPanel).</li>
+  <li>Thiết lập trong cở sở dữ liệu (Database).</li>
+</ul>
+
+<p>Đối với Spring Framework:</p>
+
+<ul>
+  <li>Thiết lập qua file properties,</li>
+  <li>Sử dụng @Scheduled.</li>
+</ul>
+
+<p>Ở bài này mình chỉ giới thiệu qua các thành phần của cron trong Spring.</p>
+
+<h3 id="thành-phần-cron">Thành phần Cron.</h3>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">+-------------------- second <span class="o">(</span>0 - 59<span class="o">)</span>
+| +------------------ minute <span class="o">(</span>0 - 59<span class="o">)</span>
+| | | +-------------- hour <span class="o">(</span>0 - 23<span class="o">)</span>
+| | | | +------------ day of month <span class="o">(</span>1-31<span class="o">)</span>
+| | | | | +---------- month <span class="o">(</span>1 - 12<span class="o">)</span>
+| | | | | | +-------- day of week <span class="o">(</span>MON - SUN<span class="o">)</span>
+<span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="k">*</span></code></pre></figure>
+
+<blockquote>
+  <p>Khác với cron trong linux, cron trong Spring hỗ trợ tới đơn vị second.</p>
+</blockquote>
+
+<p>Do đó chúng ta có thể thiết lập được các công việc theo chu kỳ ở đơn vị second.</p>
+
+<h5 id="ví-dụ">Ví dụ:</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 0 11 * * * * * 
+</code></pre></div></div>
+
+<p><strong>At 11:00:00 am every day</strong></p>
+
+<p>Truy cập vào đây: <a href="https://sotaycode.github.io/cron.sample">Tool cron</a> để tham khảo cách chuyển đổi của cron job trong Spring (công cụ chưa hoàn chỉnh, mình sẽ thực hiện chỉnh sửa và cập nhật).</p>
+:ET

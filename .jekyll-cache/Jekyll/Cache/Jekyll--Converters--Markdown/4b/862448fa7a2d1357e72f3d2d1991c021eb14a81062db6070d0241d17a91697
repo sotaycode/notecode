@@ -1,0 +1,88 @@
+I"Y<h1 id="new-project-và-set-domain">New project và set domain</h1>
+
+<h3 id="new-project">New project</h3>
+
+<p>Để khởi tạo một dự án Laravel mới ta có thể thông qua 2 cách:</p>
+
+<ul>
+  <li>Laravel Installer</li>
+  <li>Composer</li>
+</ul>
+
+<h4 id="laravel-installer">Laravel Installer</h4>
+
+<p>Tải laravel install thông qua composer:</p>
+<ul>
+  <li>Cài đặt version mới nhất:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="n">composer</span> <span class="k">global</span> <span class="k">require</span> <span class="s2">"laravel/installer"</span></code></pre></figure>
+
+<ul>
+  <li>Chỉ định version mong muốn:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="n">composer</span> <span class="k">global</span> <span class="k">require</span> <span class="s2">"laravel/installer=^4.1"</span></code></pre></figure>
+
+<p>Tạo dự án:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="n">laravel</span> <span class="k">new</span> <span class="nc">your</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">name</span></code></pre></figure>
+
+<h4 id="composer">Composer</h4>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="n">composer</span> <span class="n">create</span><span class="o">-</span><span class="n">project</span> <span class="n">laravel</span><span class="o">/</span><span class="n">laravel</span> <span class="n">your</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">name</span></code></pre></figure>
+
+<ul>
+  <li>your-project-name: thay thế thành tên dự án của bạn.</li>
+</ul>
+
+<h5 id="cấu-trúc-thư-mục">Cấu trúc thư mục:</h5>
+
+<p><img src="https://i.imgur.com/Gyz8zCc.png" alt="structure" /></p>
+
+<h5 id="start-project">Start project:</h5>
+
+<ul>
+  <li>Sử dụng câu lệnh dưới:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="n">php</span> <span class="n">artisan</span> <span class="n">serve</span></code></pre></figure>
+
+<ul>
+  <li>Add vào thư mục htdocs của xampp:</li>
+</ul>
+
+<p><img src="https://i.imgur.com/SaQoyJ9.png" alt="xampp" /></p>
+
+<p>copy dự án vừa tạo mới phía trên vào thư mục:</p>
+
+<figure class="highlight"><pre><code class="language-rouge" data-lang="rouge">\xampp\htdocs</code></pre></figure>
+
+<p>Truy cập vào url:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="n">http</span><span class="o">://</span><span class="n">localhost</span><span class="o">/</span><span class="n">laravel</span><span class="o">/</span><span class="k">public</span><span class="o">/</span></code></pre></figure>
+
+<h6 id="thành-công">Thành công:</h6>
+
+<p><img src="https://cdn.auth0.com/blog/whats-new-laravel-8/laravel-jetstream-livewire.png" alt="image-20210211145130588" /></p>
+
+<h3 id="set-domain">Set domain</h3>
+
+<p>Ở đây mình chỉ giới thiệu ở trên hệ điều hành windown 10.</p>
+
+<p>Tại file:</p>
+
+<figure class="highlight"><pre><code class="language-http" data-lang="http"><span class="err">C:\Windows\System32\drivers\host</span></code></pre></figure>
+
+<p>Add thêm <strong>127.0.0.1 dev.laravel</strong></p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="c"># localhost name resolution is handled within DNS itself.</span>
+<span class="c">#	127.0.0.1       localhost</span>
+<span class="c">#	::1             localhost</span>
+127.0.0.1 dev.laravel</code></pre></figure>
+
+<p>Bây giờ ta có thể truy cập website bằng url sau:</p>
+
+<figure class="highlight"><pre><code class="language-http" data-lang="http"><span class="err">http://dev.laravel/</span></code></pre></figure>
+
+:ET

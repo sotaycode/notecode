@@ -1,0 +1,229 @@
+I"E-<h3 id="tại-bài-báo-này-mình-sẽ-thực-hiện-tạo-một-jobrepository">Tại bài báo này mình sẽ thực hiện tạo một JobRepository.</h3>
+
+<h2 id="jobrepository-là-gì-">JobRepository là gì ?</h2>
+
+<h3 id="1-khái-niệm">1. Khái niệm.</h3>
+
+<p>CRUD trong SQL:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Operation</th>
+      <th>SQL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Create</td>
+      <td>INSERT</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Read</td>
+      <td>SELECT</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Update</td>
+      <td>UPDATE</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Delete</td>
+      <td>DELETE</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>JobRepository:</p>
+<blockquote>
+  <p>Repository responsible for persistence of batch meta-data entities.</p>
+</blockquote>
+
+<p>Nhiệm vụ thực hiện lưu trữ và đưa thông tin đôi tượng (object) vào đúng bản cài đặt của Spring Batch.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Table</th>
+      <th>Object</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>BATCH_JOB_INSTANCE</td>
+      <td>JobInstance</td>
+    </tr>
+    <tr>
+      <td>BATCH_JOB_EXECUTION</td>
+      <td>JobExecution</td>
+    </tr>
+    <tr>
+      <td>BATCH_JOB_EXECUTION_PARAMS</td>
+      <td>JobParameters</td>
+    </tr>
+    <tr>
+      <td>BATCH_STEP_EXECUTION</td>
+      <td>StepExecution</td>
+    </tr>
+    <tr>
+      <td>BATCH_JOB_EXECUTION_CONTEXT</td>
+      <td>ExecutionContext</td>
+    </tr>
+    <tr>
+      <td>BATCH_STEP_EXECUTION_CONTEXT</td>
+      <td>ExecutionContext</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="2-tạo-một-project-demo">2. Tạo một project demo.</h3>
+
+<p>Truy cập vào <a href="https://start.spring.io/">spring initializr</a> để tạo một project</p>
+
+<ul>
+  <li>
+    <p>Add các thư viện cần thiết vào project:</p>
+
+    <p><img src="https://images.viblo.asia/07e1b667-16c3-477d-9ba7-47a0b3cf787b.PNG" alt="Tables" /></p>
+  </li>
+  <li>
+    <p>Click chọn:</p>
+
+    <p><img src="https://images.viblo.asia/4f1cfc69-5a69-41ed-82e1-37715d9d2bf4.PNG" alt="Tables" /></p>
+  </li>
+</ul>
+
+<h3 id="3--cài-dặt-resource">3.  Cài dặt resource.</h3>
+
+<ul>
+  <li>Tại file application.properties thực hiện config khởi tạo tables.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-properties" data-lang="properties">  <span class="py">spring.batch.initialize-schema</span><span class="p">=</span><span class="s">always</span>
+  </code></pre></figure>
+
+<ul>
+  <li>Tạo một class config connect database MySQL</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java">  <span class="nd">@Configuration</span>
+  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">DataSourceConfiguration</span> <span class="o">{</span>
+
+      <span class="nd">@Bean</span>
+      <span class="kd">public</span> <span class="nc">DataSource</span> <span class="nf">dataSource</span><span class="o">()</span> <span class="o">{</span>
+          <span class="k">return</span> <span class="nc">DataSourceBuilder</span>
+                      <span class="o">.</span><span class="na">create</span><span class="o">()</span>
+                      <span class="o">.</span><span class="na">username</span><span class="o">(</span><span class="s">"root"</span><span class="o">)</span>
+                      <span class="o">.</span><span class="na">password</span><span class="o">(</span><span class="s">"root"</span><span class="o">)</span>
+                      <span class="o">.</span><span class="na">url</span><span class="o">(</span><span class="s">"jdbc:mysql://localhost:3306/testdb"</span><span class="o">)</span>
+                      <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+      <span class="o">}</span>
+  <span class="o">}</span>
+  </code></pre></figure>
+
+<ul>
+  <li>Tạo config cho jobRepository</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java">  <span class="nd">@Configuration</span>
+  <span class="nd">@EnableBatchProcessing</span>
+  <span class="nd">@Import</span><span class="o">({</span><span class="nc">DataSourceConfiguration</span><span class="o">.</span><span class="na">class</span><span class="o">})</span>
+  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">BatchConfig</span> <span class="kd">implements</span> <span class="nc">BatchConfigurer</span> <span class="o">{</span>
+
+      <span class="nd">@Autowired</span>
+      <span class="kd">private</span> <span class="nc">DataSource</span> <span class="n">dataSource</span><span class="o">;</span>
+
+      <span class="nd">@Bean</span>
+      <span class="kd">public</span> <span class="nc">JobRepository</span> <span class="nf">jobRepository</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+          <span class="k">return</span> <span class="nf">getJobRepository</span><span class="o">();</span>
+      <span class="o">}</span>
+
+      <span class="nd">@Bean</span>
+      <span class="kd">public</span> <span class="nc">PlatformTransactionManager</span> <span class="nf">platformTransactionManager</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+          <span class="k">return</span> <span class="nf">getTransactionManager</span><span class="o">();</span>
+      <span class="o">}</span>
+
+      <span class="nd">@Override</span>
+      <span class="kd">public</span> <span class="nc">JobRepository</span> <span class="nf">getJobRepository</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+          <span class="k">return</span> <span class="nf">createJobRepository</span><span class="o">();</span>
+      <span class="o">}</span>
+
+      <span class="kd">protected</span> <span class="nc">JobRepository</span> <span class="nf">createJobRepository</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+          <span class="nc">JobRepositoryFactoryBean</span> <span class="n">factory</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JobRepositoryFactoryBean</span><span class="o">();</span>
+          <span class="n">factory</span><span class="o">.</span><span class="na">setDataSource</span><span class="o">(</span><span class="n">dataSource</span><span class="o">);</span>
+          <span class="n">factory</span><span class="o">.</span><span class="na">setTransactionManager</span><span class="o">(</span><span class="n">getTransactionManager</span><span class="o">());</span>
+          <span class="n">factory</span><span class="o">.</span><span class="na">afterPropertiesSet</span><span class="o">();</span>
+          <span class="k">return</span> <span class="n">factory</span><span class="o">.</span><span class="na">getObject</span><span class="o">();</span>
+      <span class="o">}</span>
+
+      <span class="nd">@Override</span>
+      <span class="kd">public</span> <span class="nc">PlatformTransactionManager</span> <span class="nf">getTransactionManager</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+          <span class="k">return</span> <span class="k">new</span> <span class="nf">DataSourceTransactionManager</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">dataSource</span><span class="o">);</span>
+      <span class="o">}</span>
+
+      <span class="o">....</span>
+  <span class="o">}</span>
+  </code></pre></figure>
+
+<ul>
+  <li>
+    <p><strong>Thực hiện run</strong> lần dầu ta được một nhóm tables hệ thống của Spring Batch</p>
+
+    <p><img src="https://images.viblo.asia/cf600f41-0568-40b7-8322-1ac786f715cd.PNG" alt="Tables" /></p>
+  </li>
+</ul>
+
+<h3 id="4-class-controller">4. Class Controller</h3>
+
+<ul>
+  <li>Tiếp theo tạo một class controller gửi một request url để thực hiện tạo một JobExecution</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java">  <span class="nd">@Controller</span>
+  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">RequestRepositoryExample</span> <span class="o">{</span>
+
+      <span class="nd">@Autowired</span>
+      <span class="kd">private</span> <span class="nc">JobRepository</span> <span class="n">jobRepository</span><span class="o">;</span>
+
+      <span class="nd">@Autowired</span>
+      <span class="kd">private</span> <span class="nc">DefaultBatchConfigurer</span> <span class="n">defaultBatchConfigurer</span><span class="o">;</span>
+
+      <span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"/jobRepository"</span><span class="o">,</span> <span class="n">method</span> <span class="o">=</span> <span class="nc">RequestMethod</span><span class="o">.</span><span class="na">GET</span><span class="o">)</span>
+      <span class="nd">@ResponseBody</span>
+      <span class="kd">public</span> <span class="nc">String</span> <span class="nf">execute</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+          <span class="c1">// Creating params</span>
+          <span class="nc">JobParametersBuilder</span> <span class="n">jobParametersBuilder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JobParametersBuilder</span><span class="o">();</span>
+          <span class="n">jobParametersBuilder</span><span class="o">.</span><span class="na">addString</span><span class="o">(</span><span class="s">"firstParamter"</span><span class="o">,</span> <span class="s">"1"</span><span class="o">);</span>
+
+          <span class="c1">// Register</span>
+          <span class="n">defaultBatchConfigurer</span><span class="o">.</span><span class="na">getJobRepository</span><span class="o">()</span>
+                                <span class="o">.</span><span class="na">createJobExecution</span><span class="o">(</span><span class="s">"jobName"</span><span class="o">,</span> <span class="n">jobParametersBuilder</span><span class="o">.</span><span class="na">toJobParameters</span><span class="o">());</span>
+
+          <span class="k">return</span> <span class="s">"&lt;h1&gt;Batch Success&lt;/h1&gt;"</span><span class="o">;</span>
+      <span class="o">}</span>
+  <span class="o">}</span>
+  </code></pre></figure>
+
+<h3 id="5-kiểm-tra">5. Kiểm tra</h3>
+
+<ul>
+  <li>
+    <p>Thực hiện gửi một request “/jobRepository”</p>
+
+    <p><img src="https://images.viblo.asia/2a449a90-5417-4e38-8e48-01f1fa72e8a3.PNG" alt="Tables" /></p>
+  </li>
+  <li>
+    <p>Kiểm tra Job với tên <strong>“jobName”</strong> đã được đăng ký được chưa.</p>
+
+    <p><img src="https://images.viblo.asia/d7166553-c652-4691-adc9-e65f2ea52533.PNG" alt="Tables" /></p>
+  </li>
+  <li>
+    <p>Đã đang ký params ở của job thành công chưa.</p>
+
+    <p><img src="https://images.viblo.asia/9f37b84a-8383-4236-8d80-f03ea67b67c5.PNG" alt="Tables" /></p>
+  </li>
+</ul>
+
+<p>Vậy là đã thực hiện đăng ký thành thành công một Job thông qua class jobRepository.</p>
+
+<p>Có gì không đúng mong mọi người góp ý.</p>
+:ET

@@ -1,0 +1,152 @@
+I"
+!<h1 id="routes">Routes</h1>
+
+<h3 id="url">URL</h3>
+
+<p>Để thực thiện truy cập vào nội dung của một trang web bất kỳ chúng ta cần tới URL</p>
+
+<blockquote>
+  <p><strong>Uniform Resource Locator</strong> (viết tắt URL) định vị tài nguyên thống nhất, được gọi một cách thông thường là một địa chỉ web là một tham chiếu đến tài nguyên web chỉ định vị trí của nó trên một mạng máy tính và cơ chế để truy xuất nó. <a href="https://vi.wikipedia.org/wiki/URL">wikipedia</a>.</p>
+</blockquote>
+
+<p>Bạn hay thử truy cập vào nội dung website:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">https://www.vnexpress.net/giai-tri
+</span></code></pre></div></div>
+
+<p>Đây ta có ba thành phần:</p>
+
+<ul>
+  <li>Giao thức truyền tải dữ liệu https</li>
+  <li>www.vnexpress.net là hostname đại diện cho địa chỉ IP (tên của máy chủ cần truy cập).</li>
+  <li><strong>/giai-tri</strong> đây là path (đường dẫn) để truy vào tài nguyên, đường dẫn đưa bạn đến đúng thư mục hoặc file trên máy chủ đó, với những nội dung về liên quan tới nghệ thuật, điện ảnh,…</li>
+</ul>
+
+<p><strong>Path</strong> là phần ta đề cập tới trong bài note này.</p>
+
+<h3 id="routes-1">Routes</h3>
+
+<h4 id="directory-folder">Directory folder</h4>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>your-project-name
+|
++---app
+...
++---routes
+|       api.php
+|       channels.php
+|       console.php
+|       web.php
+</code></pre></div></div>
+
+<ul>
+  <li>Ở đây ta tập trung vào <strong>web.php</strong></li>
+</ul>
+
+<h4 id="basic-routing">Basic Routing</h4>
+
+<p>Tại web.php chúng ta có đoạn code mẫu như sau:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">use</span> <span class="nc">Illuminate\Support\Facades\Route</span><span class="p">;</span>
+
+<span class="nc">Route</span><span class="o">::</span><span class="nf">get</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="k">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nf">view</span><span class="p">(</span><span class="s1">'welcome'</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>Ở đây ta thấy các thành phần trong đoạn code:</p>
+
+<ul>
+  <li>Sử dụng class Router</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">use</span> <span class="nc">Illuminate\Support\Facades\Route</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Sử dụng phương thức tỉnh <strong>::get</strong></li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Route</span><span class="o">::</span><span class="n">get</span>
+</code></pre></div></div>
+
+<p>Path: <strong>’/’</strong> đường dẫn root.</p>
+
+<p>Khi người dùng truy cập vào đường đẫn root, php sẽ thực hiện trả về tra welcome (<strong>welcome.blade.php</strong>) tại thư mục views (\resources\views).</p>
+
+<p>TÌm hiểu thêm phương thức khác bạn có thể vào class Route (Tham khảo: <a href="https://laravel.com/docs/8.x/routing#available-router-methods">Method</a>).</p>
+
+<h4 id="route-hello-world">Route: HELLO WORLD</h4>
+
+<p>Add đoạn code vào <strong>web.php</strong>:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Route</span><span class="o">::</span><span class="nf">get</span><span class="p">(</span><span class="s1">'/hello-world'</span><span class="p">,</span> <span class="k">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s1">'&lt;h1&gt;HELLO WORLD&lt;/h1&gt;'</span><span class="p">;</span>
+<span class="p">});</span> 
+</code></pre></div></div>
+
+<p>Truy cập vào:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">http://localhost/hello-world
+</span></code></pre></div></div>
+
+<p>Ta được nội dung <strong>HELLO WORLD</strong> với <strong>format</strong> là <strong>heading 1</strong>.</p>
+
+<h4 id="route-parameter">Route: Parameter</h4>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Route</span><span class="o">::</span><span class="nf">get</span><span class="p">(</span><span class="s1">'/user/{id}'</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$id</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s1">'User '</span><span class="mf">.</span><span class="nv">$id</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Ở đây <strong>/{id}</strong> là value ta muốn gửi đi (request) cho server.</li>
+</ul>
+
+<p>Truy cập vào:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">http://localhost/user/123
+</span></code></pre></div></div>
+
+<p>Ta được nội dung <strong>User 123</strong>.</p>
+
+<h4 id="route-redirect-routes">Route: Redirect routes</h4>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Route</span><span class="o">::</span><span class="nf">redirect</span><span class="p">(</span><span class="s1">'/hello/vietnam'</span><span class="p">,</span> <span class="s1">'/hello-world'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Việc khi gọi tới <strong>/hello/vietnam</strong> chuyển hướng tới <strong>/hello-world</strong> nội dung giống với <a href="#route-hello-world">Router: HELLO WORLD</a>.</p>
+
+<h3 id="route-regular-expression-constraints">Route: Regular Expression Constraints</h3>
+
+<h5 id="regular-expression">Regular Expression</h5>
+
+<blockquote>
+  <p>Chuổi ký tự tạo thành một mẫu để tìm kiếm. Bạn có thể sử dụng mẫu này để tìm kiếm nội dụng mà cần.</p>
+</blockquote>
+
+<p><a href="https://www.w3schools.com/php/php_regex.asp">w3school</a></p>
+
+<h5 id="route">Route</h5>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Route</span><span class="o">::</span><span class="nf">get</span><span class="p">(</span><span class="s1">'user/{id}'</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$id</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s1">'User '</span><span class="mf">.</span><span class="nv">$id</span><span class="p">;</span>
+<span class="p">})</span><span class="o">-&gt;</span><span class="nf">where</span><span class="p">(</span><span class="s1">'id'</span><span class="p">,</span> <span class="s1">'[0-9]+'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Nội dung nhận được sẽ giống với <a href="#route-parameter">Router: Parameter</a> nhưng ở đây ta có điều kiện:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">-&gt;</span><span class="nf">where</span><span class="p">(</span><span class="s1">'id'</span><span class="p">,</span> <span class="s1">'[0-9]+'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Điều kiện where ở trên có nghĩa là: đối với giá trị của id (parameter) được gửi thì phải là <strong>ký tự số</strong> và có ít nhất một chữ số.</p>
+
+<h3 id="tạm-kết">Tạm Kết</h3>
+
+<p>Ở đây ta đã hiểu được những cách dùng và tạo các <strong>path</strong> khác nhau dùng để truy cập nội dung hoặc gửi yêu cầu lên (request) tới server.</p>
+
+<p>Phần tiếp theo router mình note những nội dung: thực thi method trong controller, group nhiều router.</p>
+
+<h5 id="phụ-lục">Phụ lục</h5>
+
+:ET

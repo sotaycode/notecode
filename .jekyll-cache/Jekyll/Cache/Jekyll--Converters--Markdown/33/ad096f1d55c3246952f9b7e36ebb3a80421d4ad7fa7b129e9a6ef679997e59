@@ -1,0 +1,88 @@
+I",<h2 id="mình-xin-giới-thiệu-lại-cách-khởi-tạo-và-truy-cập-phần-tử-trong-mảng">Mình xin giới thiệu lại cách khởi tạo và truy cập phần tử trong mảng.</h2>
+
+<h3 id="1-khởi-tạo-mảng">1. Khởi tạo mảng</h3>
+
+<p>Ví dụ ta khởi tạo một mảng ages có 7 phần tử:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span><span class="o">[]</span> <span class="n">ages</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">7</span><span class="o">];</span>
+<span class="kt">int</span> <span class="n">ages</span><span class="o">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">7</span><span class="o">];</span></code></pre></figure>
+
+<p>Gán gía trị cho mỗi phần từ:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">ages</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="mi">4</span><span class="o">;</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">=</span> <span class="mi">9</span><span class="o">;</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span> <span class="o">=</span> <span class="mi">8</span><span class="o">;</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">6</span><span class="o">]</span> <span class="o">=</span> <span class="mi">7</span><span class="o">;</span></code></pre></figure>
+
+<p>Hoặc gán lúc tạo mảng:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">ages</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">9</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">7</span><span class="o">};</span>
+<span class="kt">int</span> <span class="n">ages</span><span class="o">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[]{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">9</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">7</span><span class="o">};</span></code></pre></figure>
+
+<p><img src="https://images.viblo.asia/95e2eec4-5b68-4c08-a897-87a0963fd79e.jpg" alt="Array" /></p>
+
+<h3 id="2-truy-cập-phần-từ-bất-kỳ">2. Truy cập phần từ bất kỳ</h3>
+
+<p>Ví dụ cú pháp:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">ages</span><span class="o">[</span><span class="mi">7</span><span class="o">]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">8</span><span class="o">,</span> <span class="mi">9</span><span class="o">,</span> <span class="mi">7</span><span class="o">,</span> <span class="mi">6</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">3</span><span class="o">};</span></code></pre></figure>
+
+<p><img src="https://images.viblo.asia/0559e53a-39c3-4718-aea4-f9d6ebb99545.jpg" alt="" /></p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">ages</span><span class="o">[</span><span class="mi">1</span><span class="o">];</span> <span class="c1">// a = 9</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">ages</span><span class="o">[</span><span class="mi">5</span><span class="o">];</span> <span class="c1">// b = 5</span></code></pre></figure>
+
+<p>Biến a có giá trị là 9, b có giá trị là 5.</p>
+
+<h3 id="3-khởi-tạo-và-truy-cập-mảng-hai-chiều">3. Khởi tạo và truy cập mảng hai chiều</h3>
+
+<p>Ta khởi tạo mảng hai chiều ages, 
+với hàng đầu tiên là <strong>4 phần tử</strong>, hàng thứ hai là <strong>4 phần tử</strong>, hàng thứ ba là <strong>5 phần tử</strong>.</p>
+
+<p>Ví dụ cú pháp:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span><span class="o">[][]</span> <span class="n">ages</span> <span class="o">=</span> <span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">][];</span>
+<span class="kt">int</span> <span class="n">ages</span><span class="o">[][]</span> <span class="o">=</span> <span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">][];</span></code></pre></figure>
+
+<p>Khởi tạo hàng đầu tiên:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">ages</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">4</span><span class="o">];</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">4</span><span class="o">;</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="mi">7</span><span class="o">;</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="mi">9</span><span class="o">;</span></code></pre></figure>
+
+<p><img src="https://images.viblo.asia/c51d354c-d533-42ff-ab8d-31c50a01170b.jpg" alt="Array ages 1" /></p>
+
+<p>Khởi tạo hàng thứ hai:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">ages</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">4</span><span class="o">];</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="mi">4</span><span class="o">;</span></code></pre></figure>
+
+<p><img src="https://images.viblo.asia/57af7b8b-52fc-44ad-ae17-b3d94b210251.jpg" alt="Array ages 2" /></p>
+
+<p>Khởi tạo mảng thứ ba:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">ages</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">];</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">4</span><span class="o">;</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="mi">7</span><span class="o">;</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="mi">9</span><span class="o">;</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">4</span><span class="o">]</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span></code></pre></figure>
+
+<p><img src="https://images.viblo.asia/c89b0432-bf92-400d-8e2f-6c4ed655bcc5.jpg" alt="Array ages 3" /></p>
+
+<p>Về cú pháp truy cập:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">row13</span> <span class="o">=</span> <span class="n">ages</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">2</span><span class="o">];</span> <span class="c1">// row12 = 7</span>
+<span class="kt">int</span> <span class="n">row24</span> <span class="o">=</span> <span class="n">ages</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">3</span><span class="o">];</span> <span class="c1">// row24 = 4</span>
+<span class="kt">int</span> <span class="n">row31</span> <span class="o">=</span> <span class="n">ages</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">0</span><span class="o">];</span> <span class="c1">// row31 = 3</span></code></pre></figure>
+
+<p>Có gì mong mọi người góp ý.</p>
+:ET

@@ -1,0 +1,100 @@
+I"10<h2 id="mảng-trong-java-mảng-là-một-object-vô-cùng-quan-trọng-sử-dụng-một-biến-duy-nhất-để-thực-hiện-lưu-trữ-nhiều-giá-trị-cùng-kiểu-dữ-liệu">Mảng trong Java mảng là một object vô cùng quan trọng, sử dụng một biến duy nhất để thực hiện lưu trữ nhiều giá trị cùng kiểu dữ liệu.</h2>
+
+<h3 id="khái-báo-mảng-declaring">Khái báo mảng (Declaring).</h3>
+
+<p>Ví dụ về cú pháp:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span><span class="o">[]</span> <span class="n">ages</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">ages</span><span class="o">[];</span></code></pre></figure>
+
+<p>Gồm 3 thành phần là:</p>
+<ul>
+  <li>Kiểu dữ liệu: int (vd: String, double, float, …).</li>
+  <li>Tên biến: ages.</li>
+  <li>Dấu ngoặc vuông: [].</li>
+</ul>
+
+<h3 id="tạo-khởi-tạo-mảng-creating-initializing">Tạo, khởi tạo mảng (Creating, Initializing).</h3>
+
+<p>Tạo (Creating):</p>
+
+<p>Ví dụ về cú pháp:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span><span class="o">[]</span> <span class="n">ages</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">];</span>
+<span class="kt">int</span> <span class="n">ages</span><span class="o">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">];</span></code></pre></figure>
+
+<p>Cú pháp trên có ý nghĩa là tạo một mảng có 10 phần tử, nói cách khác là biến ages có thể lưu trữ 10 giá trị.</p>
+
+<ul>
+  <li>
+    <p>Khởi tạo (Initializing):</p>
+
+    <p>Ví dụ về cú pháp (1 chiều):</p>
+  </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java">  <span class="kt">int</span><span class="o">[]</span> <span class="n">ages</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">};</span>
+  <span class="kt">int</span> <span class="n">ages</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">};</span></code></pre></figure>
+
+<p>Cú pháp khởi tạo phía trên có ý là khởi tạo 6 phần tử và có giá trị từ 1 - 6.</p>
+
+<p>Ví dụ về cú pháp (2 chiều):</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span><span class="o">[][]</span> <span class="n">board</span> <span class="o">=</span> <span class="o">{</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">},</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">}</span> <span class="o">};</span>
+<span class="kt">int</span> <span class="n">board</span><span class="o">[][]</span> <span class="o">=</span> <span class="o">{</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">},</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">}</span> <span class="o">};</span></code></pre></figure>
+
+<p>Ví dụ về cú pháp (3 chiều):</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span><span class="o">[][][]</span> <span class="n">board</span> <span class="o">=</span> <span class="o">{</span> <span class="o">{</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">},</span> <span class="o">{</span><span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">}</span> <span class="o">},</span> <span class="o">{</span> <span class="o">{</span><span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">},</span> <span class="o">{</span><span class="mi">7</span><span class="o">,</span> <span class="mi">8</span><span class="o">}</span> <span class="o">}</span> <span class="o">};</span>
+<span class="kt">int</span> <span class="n">board</span><span class="o">[][][]</span> <span class="o">=</span> <span class="o">{</span> <span class="o">{</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">},</span> <span class="o">{</span><span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">}</span> <span class="o">},</span> <span class="o">{</span> <span class="o">{</span><span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">},</span> <span class="o">{</span><span class="mi">7</span><span class="o">,</span> <span class="mi">8</span><span class="o">}</span> <span class="o">}</span> <span class="o">};</span></code></pre></figure>
+
+<h3 id="truy-xuất-accessing">Truy xuất (Accessing).</h3>
+
+<p>Ví dụ cú pháp:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// Khởi tạo một mảng ages;</span>
+<span class="kt">int</span><span class="o">[]</span> <span class="n">ages</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">};</span>
+<span class="c1">// Truy xuất phần tử:</span>
+<span class="c1">// Truy xuất giá trị phần tử đầu tiên của mảng:</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span> <span class="c1">// giá trị 1</span>
+<span class="c1">// Truy xuất giá trị phần tử cuối cùng của mảng:</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">5</span><span class="o">];</span> <span class="c1">// giá trị 6</span>
+<span class="c1">// Gán một giá trị vào phần từ:</span>
+<span class="c1">// Gán giá trị vào phần tử đầu tiên của mảng:</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">8</span><span class="o">;</span>
+<span class="c1">// Gán giá trị vào phần tử cuối cùng của mảng:</span>
+<span class="n">ages</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span> <span class="o">=</span> <span class="mi">9</span><span class="o">;</span></code></pre></figure>
+
+<h3 id="ví-dụ-về-mảng">Ví dụ về mảng:</h3>
+
+<p>Một đoạn chương trình tương tác với mảng.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AJS_1</span> <span class="o">{</span>
+
+<span class="kd">static</span> <span class="nc">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+	
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="c1">// Tao mang co ten ages</span>
+		<span class="kt">int</span><span class="o">[]</span> <span class="n">ages</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">];</span>
+		
+		<span class="c1">// Gan gia tri cac phan tu mang</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Nhap 3 so nguyen vao mang: "</span><span class="o">);</span>
+		<span class="n">ages</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">scanner</span><span class="o">.</span><span class="na">nextLine</span><span class="o">());</span>
+		<span class="n">ages</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">scanner</span><span class="o">.</span><span class="na">nextLine</span><span class="o">());</span>
+		<span class="n">ages</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">scanner</span><span class="o">.</span><span class="na">nextLine</span><span class="o">());</span>
+		
+		<span class="c1">// Truy xuat gia tri phan tu mang</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Cac gia tri phan tu trong mang: "</span><span class="o">);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">ages</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">ages</span><span class="o">[</span><span class="mi">1</span><span class="o">]);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">ages</span><span class="o">[</span><span class="mi">2</span><span class="o">]);</span>
+
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Trong Series mình sẽ giới thiệu những kiến thức căn bản mà mình học tập được, và dựa trên đó để đưa ra các vấn để và cách giải quyết vấn đề.</p>
+
+<p>Nếu có gì sai sót mong mọi người góp ý.</p>
+:ET
