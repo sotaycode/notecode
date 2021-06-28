@@ -4,7 +4,7 @@ title_right   : "Tay" # default: ""
 description   : "Blog of Note."
 keywords      : "Jekyll, Java, Code, Note"
 url           : https://sotaycode.xyz # site url
-baseurl       : "https://github.com/sotaycode" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
+baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
 cover         : "/assets/img/avatar_Bod.png" # image uri like logo/cover image for site seo
 timezone      : Asia/Bangkok
 
@@ -39,10 +39,17 @@ author:
   email       : ittuan123@gmail.com # email adress
   avatar      : /assets/img/avatar_Bod.png # change with your own avatar
 
+# plugins:
+#   - jekyll-sitemap
+#   - bourbon
+#   - jekyll-paginate
+
 plugins:
+  - jekyll-feed
   - jekyll-sitemap
   - bourbon
   - jekyll-paginate
+  # - jekyll-postfiles
 
 # navbar pages
 navbar:
