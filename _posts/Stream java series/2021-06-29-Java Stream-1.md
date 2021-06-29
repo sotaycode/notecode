@@ -8,7 +8,7 @@ categories: Java Stream series
 
 ## Stream ?
 
-**Stream** dịch sang tiếng Việt nghĩa là dòng nước, dòng chảy. Ở trong ngôn ngữ lập trình Java bạn cũng có thể hình dung nó như vậy, một dòng chảy dữ liệu, từng phần tử đối tượng (Object) chạy nối nhau. Cụm từ **Stream** đã từng xuất hiện trên những Class thuộc package `java.io` ở những version trước, nhưng Class đó hỗ trợ cho việc đọc và ghi dữ liệu vào các file(txt, csv, doc, docx...).
+**Stream** dịch sang tiếng Việt nghĩa là dòng nước, dòng chảy. Ở trong ngôn ngữ lập trình Java bạn cũng có thể hình dung nó như vậy, một dòng chảy dữ liệu, từng phần tử đối tượng (Object) chạy nối nhau. Cụm từ **Stream** đã xuất hiện trên những Class thuộc package `java.io` ở những version trước, nhưng Class đó hỗ trợ cho việc đọc và ghi dữ liệu vào các file(txt, csv, doc, docx...).
 
 Tại phiênn bản JDK 1.8 trở đi **Stream** đã được hỗ trợ cho các đối tượng danh sách (List, ArrayList), và được đặt trong package `java.util.stream`
 
