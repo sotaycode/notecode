@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Java Stream Series - 1"
+date:   2021-06-29 09:29:20
+categories: Java Stream series
+---
 # Java Stream series - 1
 
 ## Stream ?
