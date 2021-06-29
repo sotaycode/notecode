@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Scrum Definition (Vietnamese)"
-date:   2021-06-29 09:29:20
+date:   2021-06-30 09:29:20
 categories: Scrum Guide
 ---
 
@@ -23,5 +23,5 @@ Các quy trình khác nhau, kỹ thuật và phương pháp có thể được s
 ------
 
 [1] lightweight framework: khung sương làm việc trong sáng và tinh gọn.
-[2] as is: trong trạng thái một cái gì đó trong thời điểm hiện tại, trong điều kiện một cái gì đó đang ở trong. ( as.. thông thường như hiện tại ).
-[3] upon: trang trọng hơn "on".
+[2] as is: trong trạng thái/điều kiện một cái gì đó trong thời điểm hiện tại ( as.. thông thường được hiểu là *hiện tại*).
+[3] upon: trang trọng hơn so với dùng "on".
