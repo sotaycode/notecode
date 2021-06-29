@@ -5,7 +5,7 @@ date:   2021-06-30 09:29:20
 categories: Scrum Guide
 ---
 
-## Scrum Definition
+## Định nghĩa Scrum
 
 Scrum là một lightweight framework[1] giúp ích cho nhiều người, đội (team) và tổ chức (organizations) tạo ra các giá trị thông qua các giải pháp thích ứng cho vấn đề phức tạp.
 
@@ -22,6 +22,4 @@ Các quy trình khác nhau, kỹ thuật và phương pháp có thể được s
 
 ------
 
-[1] lightweight framework: khung sương làm việc trong sáng và tinh gọn.
-[2] as is: trong trạng thái/điều kiện một cái gì đó trong thời điểm hiện tại ( as.. thông thường được hiểu là *hiện tại*).
-[3] upon: trang trọng hơn so với dùng "on".
+[1] lightweight framework: khung sương làm việc trong sáng và tinh gọn.<br>[2] as is: trong trạng thái/điều kiện một cái gì đó trong thời điểm hiện tại ( as.. thông thường được hiểu là *hiện tại*).<br>[3] upon: trang trọng hơn so với dùng "on".
