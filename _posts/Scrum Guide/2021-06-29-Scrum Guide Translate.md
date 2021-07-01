@@ -11,7 +11,4 @@ categories: Scrum Guide (Vietnames)
 1. [Scrum Definition - Định nghĩa Scrum](/2021/Scrum-Definition/)
 2. [Scrum Theory - Lý thuyết Scrum](/2021/Scrum-Theory/)
 3. [Transparency - Tính minh bạch](/2021/Transparency)
-4. [Inspection- Sự kiểm tra](/2021/Inspection)
-
-
-
+4. [Inspection - Sự kiểm tra](/2021/Inspection)
