@@ -13,4 +13,4 @@ Sự đánh giá cho phép sự thích nghi, sự đánh giá ngoài sự thích
 
 ------
 
-[1] diligently:<br>[2] variances: sự mâu thuẫn, phương sai. (Bạn có thể xem series Loki đễ biết thêm).<br>[3] cadence: nhịp điệu phách.
+[1] diligently: siêng năng<br>[2] variances: sự mâu thuẫn, phương sai. (Bạn có thể xem series Loki đễ biết thêm).<br>[3] cadence: nhịp điệu phách.
