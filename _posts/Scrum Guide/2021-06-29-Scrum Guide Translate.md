@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Scrum Guide (Vietnames)"
-date:   2021-06-30 09:29:20
+date:   2021-06-29 09:29:20
 categories: Scrum Guide (Vietnames)
 ---
 ## Dịch thuật
@@ -14,3 +14,4 @@ categories: Scrum Guide (Vietnames)
 4. [Inspection - Sự kiểm tra](/2021/Inspection)
 5. [Adaptation - Sự thích nghi](/2021/Adaptation)
 6. [Scrum Value - Giá trị Scrum](/2021/Scrum-Value/)
+7. [Developer](/2021/Developer)
