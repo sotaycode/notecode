@@ -16,4 +16,5 @@ categories: Scrum Guide (Vietnames)
 6. [Scrum Value - Giá trị Scrum](/2021/Scrum-Value/)
 7. [Developer - Người phát triển](/2021/Developer)
 8. [Product Owner - Chủ sở hửu sản phẩm](/2021/Product-Owner)
+9. [Scrum Master - Bậc thầy Scrum](/2021/Scrum-Master)
 
