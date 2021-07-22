@@ -9,7 +9,7 @@ categories: Scrum Guide
 
 Scrum Artifacts và sự phát triển hướng tới những mục tiêu đã được thống nhất, bắt buộc phải được đánh giá thường xuyên và siêng năng[1] để phát hiện khả năng những sự mâu thuẫn[2] không mong muốn hoặc các vấn đề. Để giúp kiểm tra, Scrum cung cấp nhịp điệu[3] dưới dạng năm sự kiện của nó.
 
-Sự đánh giá cho phép sự thích nghi, sự đánh giá ngoài sự thích nghi được xem là vô nghĩa. Những sự kiên Scrum được xây dựng đẻ kích thích sự thay đổi.
+Sự đánh giá cho phép sự thích nghi, sự đánh giá ngoài sự thích nghi được xem là vô nghĩa. Những sự kiên Scrum được xây dựng để khuyến khích sự thay đổi.
 
 ------
 
