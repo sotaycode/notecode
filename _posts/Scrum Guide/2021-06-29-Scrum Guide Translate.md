@@ -18,4 +18,5 @@ categories: Scrum Guide (Vietnames)
 8. [Product Owner - Chủ sở hửu sản phẩm](/2021/Product-Owner)
 9. [Scrum Master - Bậc thầy Scrum](/2021/Scrum-Master)
 10. [Scrum Events - Những sự kiện Scrum](/2021/Scrum-Events)
+11. [The Sprint - Cuộc đua nước rút](/2021/The-Sprint)
 
