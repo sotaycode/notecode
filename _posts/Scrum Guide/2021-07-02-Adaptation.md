@@ -7,10 +7,11 @@ categories: Scrum Guide
 
 ## Sự thích nghi
 
-Nếu bất kỳ một tiến trình đi chệch hướng ra ngoài giới hạn có thể chấp nhận được hoặc kết quả sản phẩm là không thể chấp nhận được, tiến trình đang được áp dụng hoặc vật liệu(nguyên liệu) đang được chế tạo bắt buộc phải được tinh chỉnh. Sự tinh chỉnh phải được thực hiện sớm nhất có thể để giảm thiểu[1] sự sai lệch.
+Nếu bất kỳ một tiến trình đi chệch hướng ra ngoài giới hạn có thể chấp nhận được hoặc kết quả sản phẩm là không thể chấp nhận được, tiến trình đang được áp dụng hoặc chất liệu(nguyên liệu) đang được chế tạo bắt buộc phải được tinh chỉnh. Sự tinh chỉnh phải được thực hiện sớm nhất có thể để giảm thiểu[1] sự sai lệch thêm nữa.
 
-Sự thích nghi trở nên khó khăn hơn khi những người liên quan hoặc không được trao quyền hoặc không tự quản lý bản thân.
+Sự thích nghi trở nên khó khăn hơn khi những người liên quan hoặc không được trao quyền hoặc không tự quản lý bản thân. Scrum Team đòi hỏi thích nghi lập tức, bất cứ điều gì mới được học thông qua sự kiểm tra.
 
 ------
 
-[1] minimize: giảm thiểu thấp nhất.
+[1] minimize: giảm thiểu thấp nhất.<br>
+[2] further: thêm nữa. 
