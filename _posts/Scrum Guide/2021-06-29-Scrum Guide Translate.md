@@ -19,4 +19,4 @@ categories: Scrum Guide (Vietnames)
 9. [Scrum Master - Bậc thầy Scrum](/2021/Scrum-Master)
 10. [Scrum Events - Những sự kiện Scrum](/2021/Scrum-Events)
 11. [The Sprint - Cuộc đua nước rút](/2021/The-Sprint)
-
+12. [Sprint Planning - Kế hoạch Sprint](/2021/Sprint-Planning)
