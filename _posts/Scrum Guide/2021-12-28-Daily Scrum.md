@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Daily Scrum(Vietnamese)"
+title:  "Daily Scrum (Vietnamese)"
 date:   2021-12-28 08:20:00
 categories: Scrum Guide
 ---
