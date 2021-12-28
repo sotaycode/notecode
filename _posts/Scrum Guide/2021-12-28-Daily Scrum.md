@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Daily Scrum(Vietnamese)"
+date:   2021-28-12 08:47:00
+categories: Scrum Guide
+---
+
 ## Scrum Hằng Ngày
 
 Mục đích của Daily Scrum là kiểm tra sự tiến triển hướng tới Sprint Goal và sửa đối Print Backlog khi cần thiết, điều chỉnh công việc dự kiến sắp tới. 
