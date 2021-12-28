@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sprint Retrospective(Vietnamese)"
+title:  "Sprint Retrospective (Vietnamese)"
 date:   2021-12-28 09:00:00
 categories: Scrum Guide
 ---
