@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Sprint Review(Vietnamese)"
-date:   2021-28-12 08:49:20
+date:   2021-12-28 08:49:20
 categories: Scrum Guide
 ---
 
