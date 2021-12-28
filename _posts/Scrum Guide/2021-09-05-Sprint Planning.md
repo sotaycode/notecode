@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sprint Planning(Vietnamese)"
+title:  "Sprint Planning (Vietnamese)"
 date:   2021-08-04 11:35:20
 categories: Scrum Guide
 ---
