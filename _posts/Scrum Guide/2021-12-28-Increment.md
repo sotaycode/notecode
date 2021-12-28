@@ -27,16 +27,10 @@ Những Developer được yêu cầu đánh giá về Definition of Done. Nếu
 
 ---
 
-[1] a concrete stepping stone: stepping-stone là gì đó cũ thể mà ta có thể dẫm lên hoặc một vật sử dụng như công cụ đưa ta lên vị trí cao hơn, hoặc là bước đệm, bàn đạp.
-
-[2] additive: đề thêm vào, cộng vào, chất phụ gia.
-
-[3] stackholders: Những bên thứ ba, các bên liên quan, (khách hàng).
-
-[4] Definition of Done: Định nghĩa về hoàn thành.
-
-[5] Born: sinh ra, hình thành.
-
-[6] share understanding: Một sự chia sẽ hiểu biết, kiến thức cho một groups. 
-
+[1] a concrete stepping stone: stepping-stone là gì đó cũ thể mà ta có thể dẫm lên hoặc một vật sử dụng như công cụ đưa ta lên vị trí cao hơn, hoặc là bước đệm, bàn đạp.<br>
+[2] additive: đề thêm vào, cộng vào, chất phụ gia.<br>
+[3] stackholders: Những bên thứ ba, các bên liên quan, (khách hàng).<br>
+[4] Definition of Done: Định nghĩa về hoàn thành.<br>
+[5] Born: sinh ra, hình thành.<br>
+[6] share understanding: Một sự chia sẽ hiểu biết, kiến thức cho một groups.
 [What is Shared Understanding](https://www.igi-global.com/dictionary/shared-understanding/26788)
