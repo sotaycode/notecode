@@ -3,7 +3,7 @@ title_left    : "SoTay"
 title_right   : "Code" # default: ""
 description   : "Blog of Note."
 keywords      : "Jekyll, Java, Code, Note"
-url           : https://sotaycode.xyz # site url
+url           : https://sotaycode.github.io/ # site url
 baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
 cover         : "/assets/img/avatar_Bod.png" # image uri like logo/cover image for site seo
 timezone      : Asia/Bangkok
